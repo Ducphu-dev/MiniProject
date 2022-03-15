@@ -1,0 +1,26 @@
+$family: (
+	primary: "utm-avo",
+	// second: "Open+Sans"
+);
+
+$color: (	
+	// theme
+	main: #133C63,
+
+	// text
+	
+	// required
+	b: rgb(20, 15, 15),
+	w: #FFF,
+	x: #F6F6F6,
+	// notification
+);
+
+$shadow:(
+	s1: 0 3px 6px rgba(0,0,0,.16),
+	s2: 0 4px 10px rgba(0,0,0,.16),
+);
+
+
+///////////////////// PAGE ////////////////////////////
+@import "../_variables/index";

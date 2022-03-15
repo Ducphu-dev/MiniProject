@@ -14,17 +14,17 @@ html, body{
 	scroll-behavior: smooth;
 	
 	line-height: 1.2;
-	font-family: Montserrat;
+	font-family: Noto-San-Regular;
 }
 
 html {
-	font-size: 52.5%; // 8.4px
-	@media (min-width: 769px) {
-		font-size: 57.5%; // 9.2px
-	}
-	@media (min-width: 1281px) {
-		font-size: 62.5%; // 10px
-	}
+	// font-size: 52.5%; // 8.4px
+	// @media (min-width: 769px) {
+	// 	font-size: 57.5%; // 9.2px
+	// }
+	// @media (min-width: 1281px) {
+	// 	font-size: 62.5%; // 10px
+	// }
 	// @media (min-width: 1921px) {
 	// 	font-size: 77%; // 12.32px
 	// }
@@ -40,7 +40,6 @@ body {
 	color: white;
 
 	max-width: 100%;
-	overflow-x: hidden;
 }
 
 // fullpage
@@ -52,10 +51,7 @@ main{
 }
 
 
-main,
-#banner,
-#bannerSub,
-#breadcrumb{
+main{
 	// max-width: 1336px;
 	margin-left:auto;
 	margin-right:auto;

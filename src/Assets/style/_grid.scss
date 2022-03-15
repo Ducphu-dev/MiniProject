@@ -14,11 +14,11 @@
     margin-left: auto;
     position: relative;
 
-	@media (min-width: 1025px){
-		max-width: 1200px;
-	}
-	@media (min-width: 1200px){
-		max-width: 1890px;
+	// @media (min-width: 1025px){
+	// 	max-width: 1200px;
+	// }
+	@media (min-width: 768px){
+		max-width: 700px;
 	}
 }
 .mr-auto{
@@ -45,86 +45,7 @@
 	padding-left: 10px;
 }
 
-// .col {
-// 	-ms-flex-preferred-size: 0;
-// 	flex-basis: 0;
-// 	-ms-flex-positive: 1;
-// 	flex-grow: 1;
-// 	max-width: 100%;
-// }
 
-// .col-auto {
-// 	-ms-flex: 0 0 auto;
-// 	flex: 0 0 auto;
-// 	width: auto;
-// 	max-width: 100%;
-// }
-
-
-.col,
-[class*="col-"] {
-	width: 100%;
-	padding-right: 8px;
-	padding-left: 8px;
-}
-
-// .row-evenly {
-// 	display: flex;
-// 	flex-wrap: wrap;
-// 	margin-right: 12px;
-// 	margin-left: 12px;
-// }
-
-// .row {
-// 	display: flex;
-// 	flex-wrap: wrap;
-// 	margin-right: -12px;
-// 	margin-left: -12px;
-// 	&.between{
-// 		justify-content: space-between;
-// 	}
-// }
-
-// .no-gutters {
-// 	margin-right: 0;
-// 	margin-left: 0;
-// 	> .col,
-// 	> [class*="col-"] {
-// 		padding-right: 0;
-// 		padding-left: 0;
-// 	}
-// }
-
-
-///////////////////////////////////////////////////
-
-$tableColumn: (1: 8.33333%,
-	2: 16.66667%,
-	3: 25%,
-	4: 33.33333%,
-	5: 41.66667%,
-	6: 50%,
-	7: 58.33333%,
-	8: 66.66667%,
-	9: 75%,
-	10: 83.33333%,
-	11: 91.66667%,
-	12: 100%);
-
-.table-row {
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: 8px;
-	margin-left: 8px;
-	width: 100%;
-
-	&.between {
-		margin-right: -8px;
-		margin-left: -8px;
-		width: calc(100% + 16px);
-	}
-
-}
 
 
 $flex: (6: 16.66667%,
@@ -654,37 +575,3 @@ $flex: (6: 16.66667%,
 	}
 }
 
-// .col,
-// [class*="col-"] {
-// 	width: 100%;
-// 	padding-right: 10px;
-// 	padding-left: 10px;
-// }
-
-// .row-col3{
-
-// 	&>*{
-// 		// -ms-flex: 0 0 25%;
-// 		flex: 0 0 33.333333%;
-// 		max-width: 33.333333%;
-// 		padding-right: 12px;
-// 		padding-left: 12px;
-
-// 		&:nth-of-type(n + 5){
-// 			padding-top: 24px;
-// 		}
-// 	}
-// }
-// .row-col4{
-// 	&>*{
-// 		// -ms-flex: 0 0 25%;
-// 		flex: 0 0 25%;
-// 		max-width: 25%;
-// 		padding-right: 12px;
-// 		padding-left: 12px;
-
-// 		&:nth-of-type(n + 5){
-// 			padding-top: 24px;
-// 		}
-// 	}
-// }
