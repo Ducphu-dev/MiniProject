@@ -283,7 +283,6 @@ function App(props: any) {
                 <TrendingTop/>
             </div>
             <main>
-                <h1 className="title">첫편부터 </h1>
                 <VerticalCard cardList={cardList1} title="기다리면 무료 웹툰" volume="( 3,577 )" />
                 <VerticalCard cardList={cardList2} title="인기 웹툰" volume="( 124 )" />
                 <VerticalCard cardList={cardList3} title="기다리면 무료 소설" volume="( 4,548 )" />

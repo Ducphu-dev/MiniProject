@@ -8,6 +8,9 @@
     display: flex;
     font-family: Noto-San-Regular;
     object-fit: contain;
+    img {
+        width: unset;
+    }
 
     .card-left {
         box-sizing: border-box;
