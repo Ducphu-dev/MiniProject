@@ -8,9 +8,17 @@ $color: (
 	main: #133C63,
 
 	// text
-	
+	// text-1:#242526,
+	text-1:#ffd200,
+	text-2:#333333,
+	text-3:#9c9c9c,
+	text-4:#bbbbbb,
+
+	// bg
+	bg-1:#242526,
+
 	// required
-	b: rgb(20, 15, 15),
+	b: rgb(68, 44, 44),
 	w: #FFF,
 	x: #F6F6F6,
 	// notification
@@ -23,4 +31,3 @@ $shadow:(
 
 
 ///////////////////// PAGE ////////////////////////////
-@import "../_variables/index";

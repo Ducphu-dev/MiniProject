@@ -1,0 +1,105 @@
+@import "../../../Assets/style/mixins";
+@import "../../../Assets/style/variables";
+.block-horizon_card{
+    width: 100%;
+    // width: calc(100% / 5);
+    // @media (max-width: 640px) {
+    //     width: calc(100% / 4);
+    // }
+    // @media (max-width: 480px) {
+    //     width: calc(100% / 3);
+    // }
+    // padding: 0 8px;
+    margin-bottom: 20px;
+    .horizon_card{
+        position: relative;
+        &-link{
+            width: 100%;
+            position: absolute;
+            
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            
+        }
+        &-top{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.1);
+            .card-img{
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                
+                .img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                }
+            }
+            .card-overlay{
+                width: 100%;
+                padding: 5px;
+                background-color: map-get($color, bg-1 );
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &_rank{
+                    color: map-get($color, text-1);
+                    .rank{
+                        display: flex;
+                        align-items: center;
+                        svg{
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                &_time{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+        }
+        &-bottom{
+            &>*{
+                margin-top: 10px;
+            }
+            .card-title{
+                &>*{
+                    @include p-line-clamp(1);
+                    color: map-get($color, text-2 );
+                    font-size: 16px;
+                    font-family:Noto-San-Light ;
+                }
+                
+            }
+            .card-viewer{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 14px;
+                    height: 14px;
+                    object-fit: contain;
+                }
+                &>*{
+                    color: map-get($color, text-3 );
+                    font-size: 14px;
+                    font-family:Noto-San-Light ;
+                    &:not(:last-child){
+                        margin-right: 4px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
