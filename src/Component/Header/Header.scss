@@ -1,0 +1,134 @@
+.header-wrapper {
+  //header
+  .header {
+    $header-height: 80px;
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #fff;
+    &-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      .logo {
+        margin-right: auto;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .search-box {
+      position: relative;
+      border: 1px solid #cfcfcf;
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 3px 3px 3px 11px;
+      &-input {
+        outline: none;
+        border: none;
+        color: #000;
+        font-weight: 500;
+      }
+      &-icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        padding-right: 10px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .cta {
+      display: flex;
+      align-items: center;
+      .stage {
+        margin-left: 24px;
+      }
+      &-gr {
+        display: flex;
+        align-items: center;
+        margin-left: 22px;
+      }
+      &-link {
+        text-decoration: none;
+        color: #999999;
+        font-family: Noto-San-Regular;
+        font-size: 18px;
+      }
+    }
+  }
+
+  //navigation
+  .navigation {
+    width: 100%;
+    .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list {
+      width: 100%;
+      .ant-tabs-tab {
+        padding: 30px 0 15px 0;
+        margin: 0;
+        flex: 1;
+        justify-content: center;
+      }
+      .ant-tabs-ink-bar {
+        background-color: #ffd200;
+        height: 3px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #header {
+      &.header {
+        height: auto !important;
+      }
+      .header-container {
+        padding: 16px;
+        flex-direction: column;
+        height: auto;
+        .logo {
+          margin: auto;
+          margin-bottom: 24px;
+        }
+        .menu {
+          flex-direction: row-reverse;
+          width: 100%;
+          justify-content: space-between;
+          .cta {
+            .stage {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 525px) {
+    #header {
+      .header-container {
+        .menu {
+          flex-direction: column;
+          width: 100%;
+          gap: 16px;
+          .search-box {
+            width: 100%;
+          }
+          .cta {
+            width: 100%;
+            .stage {
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -31,27 +31,26 @@ html {
 }
 
 body {
-	// font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-	// 	"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-	// 	"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	
-	font-size: 1.6rem;
-	background-color: #ffffff;
-	color: white;
+	font-size: 16px;
+	background-color: #eee;
+	color: #000000;
 
 	max-width: 100%;
 }
 
-// fullpage
-main{
-	position: relative;
+// // fullpage
+// main{
+// 	position: relative;
 	
-	width: 100%;
+// 	width: 100%;
 	
-}
+// }
 
 
-main{
+main,
+#banner,
+#bannerSub,
+#breadcrumb{
 	// max-width: 1336px;
 	margin-left:auto;
 	margin-right:auto;

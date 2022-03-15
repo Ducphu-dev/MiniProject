@@ -1,0 +1,10 @@
+@import "../../Assets/style/mixins";
+@import "../../Assets/style/variables";
+
+.block-horizon{
+    // width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 16px;
+    flex-wrap: wrap;
+}

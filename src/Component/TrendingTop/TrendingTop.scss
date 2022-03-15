@@ -1,0 +1,105 @@
+@import "../../Assets/style/variables";
+.block-toptrending{
+    background-color: #fff;
+    padding: 15px 16px;
+    &_header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        &-right{
+            display: flex;
+            align-items: center;
+            .header-title{
+                &>*{
+                    color: map-get($color, text-2 );
+                    font-size: 20px;
+                    font-family:Noto-San-Light ;
+                }
+            }
+            .header-amount{
+                &>*{
+                    color: map-get($color, text-3 );
+                    font-size: 14px;
+                    font-family:Noto-San-Light ;
+                    margin-left: 5px;
+                }
+            }
+        }
+        &-left{
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            .header-sort_items{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                .dot{
+                    box-sizing: border-box;
+                    margin: 0;
+                    min-width: 0;
+                    border-radius: 50%;
+                    background-color: #333;
+                    width: 2px;
+                    height: 2px;
+                    -webkit-align-self: center;
+                    -ms-flex-item-align: center;
+                    align-self: center;
+                    margin-left: 2px;
+                    margin-right: 3px;
+                }
+                &:not(:last-child){
+                    margin-right: 10px;
+                }
+                &>*{
+                    color: map-get($color, text-3 );
+                    font-size: 18px;
+                    font-family:Noto-San-Light ;
+                    
+                }
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                &.active{
+                    &>*{
+                        color: map-get($color, text-2 );
+                        font-size: 18px;
+                        font-family:Noto-San-Light ;
+                    }
+                    svg{
+                        path{
+                            fill:map-get($color, text-2 ) ;
+                        }
+                    }
+                }
+               
+            }
+        }
+        
+    }
+    &_nav{
+        .trending_nav{
+            display: flex;
+            align-items: center;
+           
+            position: relative;
+            margin: 20px 0;
+            &-items{
+                cursor: pointer;
+                flex: 1;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-size: 20px;
+                text-align: center;
+                color: map-get($color, text-4 );
+                position: relative;
+                z-index: 1;
+                border-bottom: 1px solid #f1f1f1;
+                &.active{
+                    color: map-get($color, text-2 );
+                    border-bottom: 2px solid #ffd200;
+                }
+            }
+        }
+    }
+}

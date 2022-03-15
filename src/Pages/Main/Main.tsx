@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../Assets/style/_grid.scss';
+import TrendingTop from '../../Component/TrendingTop/TrendingTop';
 import './Main.scss';
 
 import resource1 from '../../Assets/images/VerticalCard/resource1.png';
@@ -277,7 +279,9 @@ const cardList8 = [
 function App(props: any) {
     return (
         <>
-            {/* <Header/> */}
+            <div className='container'>
+                <TrendingTop/>
+            </div>
             <main>
                 <h1 className="title">첫편부터 </h1>
                 <VerticalCard cardList={cardList1} title="기다리면 무료 웹툰" volume="( 3,577 )" />
