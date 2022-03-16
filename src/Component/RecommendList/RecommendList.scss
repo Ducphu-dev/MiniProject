@@ -1,5 +1,5 @@
 @import "../../Assets/style/variables";
-.block-toptrending{
+.block-recommend{
     background-color: #fff;
     padding: 15px 16px;
     margin-bottom: 15px;
@@ -33,50 +33,19 @@
             display: flex;
             align-items: center;
             margin-left: auto;
-            .header-sort_items{
+            .header-link{
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                .dot{
-                    box-sizing: border-box;
-                    margin: 0;
-                    min-width: 0;
-                    border-radius: 50%;
-                    background-color: #333;
-                    width: 2px;
-                    height: 2px;
-                    -webkit-align-self: center;
-                    -ms-flex-item-align: center;
-                    align-self: center;
-                    margin-left: 2px;
-                    margin-right: 3px;
-                }
-                &:not(:last-child){
-                    margin-right: 10px;
-                }
                 &>*{
-                    color: map-get($color, text-3 );
+                    color: map-get($color, text-5 );
                     font-size: 18px;
-                    font-family:Noto-San-Light ;
-                    
+                    font-family:Noto-San-Demi-Light ;
+                    margin-left: 5px;
                 }
-                svg{
-                    width: 20px;
-                    height: 20px;
+                img{
+                    width: 10px;
                 }
-                &.active{
-                    &>*{
-                        color: map-get($color, text-2 );
-                        font-size: 18px;
-                        font-family:Noto-San-Light ;
-                    }
-                    svg{
-                        path{
-                            fill:map-get($color, text-2 ) ;
-                        }
-                    }
-                }
-               
             }
         }
         

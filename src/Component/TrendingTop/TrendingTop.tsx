@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react';
+import CardImage_1 from '../../Assets/images/HorizontalCard/resource.png';
 import CardImage_2 from '../../Assets/images/HorizontalCard/resource (1).png';
 import CardImage_3 from '../../Assets/images/HorizontalCard/resource (2).png';
 import CardImage_4 from '../../Assets/images/HorizontalCard/resource (3).png';
@@ -7,7 +8,7 @@ import CardImage_5 from '../../Assets/images/HorizontalCard/resource (4).png';
 import CardImage_6 from '../../Assets/images/HorizontalCard/resource (5).png';
 import CardImage_7 from '../../Assets/images/HorizontalCard/resource (6).png';
 import CardImage_8 from '../../Assets/images/HorizontalCard/resource (7).png';
-import CardImage_1 from '../../Assets/images/HorizontalCard/resource.png';
+
 import '../../Assets/style/_reset.scss';
 import HorizontalCard from '../HorizontalCard/HorizotalCard';
 import './TrendingTop.scss';
@@ -669,7 +670,8 @@ function TrendingTop(props:any) {
                 </ul>
             </div>
             <HorizontalCard
-                TopTrendingList={filterTrending}
+                HorizontalCard={filterTrending}
+                cols={"horizontal-5"}
             />
             
         </div>
