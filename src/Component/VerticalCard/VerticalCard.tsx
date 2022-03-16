@@ -3,7 +3,6 @@ import React from 'react';
 import VerticalCardItemFour from './VerticalCardItemFour/VerticalCardItemFour';
 import './VerticalCard.scss';
 import iconArrow from '../../Assets/images/VerticalCard/icon-arrow.svg';
-import useWindowSize from './useWindowSize';
 import VerticalCardItemThree from './VerticalCardItemThree/VerticalCardItemThree';
 import VerticalCardRank from './VerticalCardRank/VerticalCardRank';
 
@@ -17,11 +16,12 @@ type Props = {
 };
 
 const VerticalCard = ({ cardList, title, volume, title1, title2, rank }: Props) => {
-    const { width, height } = useWindowSize();
+
+    
 
     return (
         <div className="vertical-card">
-            <Card style={{ width: `${width < 1279 ? '1024' : '720'}` }}>
+            <Card >
                 <div className="header">
                     <div className="header-left">
                         {title1 ? (

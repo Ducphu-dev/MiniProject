@@ -1,6 +1,8 @@
 import React from 'react';
+import { RecommendListImg } from '../../Assets/data/Recommend';
 import { cardList1, cardList2, cardList3, cardList4, cardList5, cardList6, cardList7, cardList8, cardList9 } from '../../Assets/data/verticalCard';
 import '../../Assets/style/_grid.scss';
+import Recommend from '../../Component/Recommend/Recommend';
 import TrendingTop from '../../Component/TrendingTop/TrendingTop';
 import VerticalCard from '../../Component/VerticalCard/VerticalCard';
 import './Main.scss';
@@ -21,6 +23,7 @@ function App(props: any) {
                 <VerticalCard cardList={cardList7} title="밀리언 페이지 소설" volume="" />
                 <VerticalCard cardList={cardList8} title="화제 의 베스트셀러" volume="" />
                 <VerticalCard cardList={cardList9} title="화제 의 베스트셀러" volume="" title1="방송" title2="핫픽" />
+                <Recommend img={RecommendListImg} />
             </main>
             {/* <Footer/> */}
         </>
