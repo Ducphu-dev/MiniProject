@@ -36,10 +36,14 @@ const VerticalCardItemFour = ({ cardItem }: Props) => {
                         <img className="view-icon" src={icon_count} alt=""></img>
                         <p className="count">{cardItem.view}</p>
                     </div>
-                    <div className="vertical-dash"></div>
-                    <div className="author">
-                        <p className="author-name">{cardItem.author}</p>
-                    </div>
+                    {cardItem.author ? (
+                        <>
+                            <div className="vertical-dash"></div>
+                            <div className="author">
+                                <p className="author-name">{cardItem.author}</p>
+                            </div>
+                        </>
+                    ) : null}
                 </div>
             </div>
         </div>

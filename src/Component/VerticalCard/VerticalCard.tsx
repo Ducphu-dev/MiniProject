@@ -5,14 +5,18 @@ import './VerticalCard.scss';
 import iconArrow from '../../Assets/images/VerticalCard/icon-arrow.svg';
 import useWindowSize from './useWindowSize';
 import VerticalCardItemThree from './VerticalCardItemThree/VerticalCardItemThree';
+import VerticalCardRank from './VerticalCardRank/VerticalCardRank';
 
 type Props = {
     cardList: any;
     title: string;
     volume: string;
+    title1?: string;
+    title2?: string;
+    rank?: boolean;
 };
 
-const VerticalCard = ({ cardList, title, volume }: Props) => {
+const VerticalCard = ({ cardList, title, volume, title1, title2, rank }: Props) => {
     const { width, height } = useWindowSize();
 
     return (
@@ -20,31 +24,54 @@ const VerticalCard = ({ cardList, title, volume }: Props) => {
             <Card style={{ width: `${width < 1279 ? '1024' : '720'}` }}>
                 <div className="header">
                     <div className="header-left">
-                        <a className="header-left-title" href="/#">
-                            {title}
-                        </a>
-                        <a className="header-left-volume" href="/#">
-                            {volume}
-                        </a>
+                        {title1 ? (
+                            <>
+                                <a className="header-left-title-1" href="/#">
+                                    {title1}
+                                </a>
+                                <div className="header-left-title-dash">|</div>
+
+                                <a className="header-left-title" href="/#">
+                                    {title2}
+                                </a>
+                            </>
+                        ) : (
+                            <>
+                                <a className="header-left-title" href="/#">
+                                    {title}
+                                </a>
+                                <a className="header-left-volume" href="/#">
+                                    {volume}
+                                </a>
+                            </>
+                        )}
                     </div>
                     <div className="header-right">
                         <p className="header-right-more">더보기</p>
                         <img src={iconArrow} alt="" className="icon-arrow" />
                     </div>
                 </div>
-                {cardList.length % 2 ===0 ? (
+                {cardList.length % 2 === 0 && !cardList.rank ? (
                     <div className="card-list">
                         {cardList.map((item: any, index: number) => (
                             <VerticalCardItemFour key={index} cardItem={item} />
                         ))}
                     </div>
-                ) : (
-                    <div className="card-list-three">
+                ) : null}
+                {cardList.length % 2 === 1 && rank === true ? (
+                    <div className="card-list-rank">
                         {cardList.map((item: any, index: number) => (
-                            <VerticalCardItemThree key={index} cardItem={item}  />
+                            <VerticalCardRank key={index} cardItem={item} />
                         ))}
                     </div>
-                )}
+                ) : null}
+                {cardList.length % 2 === 1 && !rank ? (
+                    <div className="card-list-three">
+                        {cardList.map((item: any, index: number) => (
+                            <VerticalCardItemThree key={index} cardItem={item} />
+                        ))}
+                    </div>
+                ) : null}
             </Card>
         </div>
     );
