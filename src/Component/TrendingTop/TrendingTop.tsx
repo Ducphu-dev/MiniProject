@@ -672,8 +672,14 @@ function TrendingTop(props:any) {
             <HorizontalCard
                 HorizontalCard={filterTrending}
                 cols={"horizontal-5"}
+                numberLimited={30}
             />
-            
+            <div className='block-toptrending_btn'>
+                <div className="toptrending_btn">
+                    <div className='toptrending_btn-decs' >수요 연재 더보기</div>    
+                    <img src="https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e" />
+                </div>
+            </div>
         </div>
         
     );

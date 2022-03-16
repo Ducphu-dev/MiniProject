@@ -9,7 +9,7 @@ import HorizontalCardFourItems from './HorizontalCardItems/HorizontalCardFourIte
 
 function HorizontalCardNoRank(props:any) {
     
-    const {HorizontalCard, cols} = props
+    const {HorizontalCard, cols,numberLimited} = props
 
     return (
         <div className= {`block-horizon ${ cols }`}>
@@ -24,7 +24,7 @@ function HorizontalCardNoRank(props:any) {
                         />
                     )
                 }) 
-                .filter((product:any,index:any) => index < 4)
+                .filter((product:any,index:any) => index < numberLimited)
             }
         </div>
         

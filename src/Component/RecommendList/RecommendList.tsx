@@ -142,6 +142,7 @@ function RecommendList(props:any) {
             <HorizontalCardNoRank
                 HorizontalCard={TopRecommendList}
                 cols={"horizontal-4"}
+                numberLimited={4}
             />
             
             
