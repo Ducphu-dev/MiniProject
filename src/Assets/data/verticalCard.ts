@@ -7,6 +7,7 @@ import icon_number from '../images/VerticalCard/icon_15.png';
 import icon_text from '../images/VerticalCard/badge_novel.png';
 import icon_cup from '../images/VerticalCard/badge_right_million.png';
 import icon_point from '../images/VerticalCard/badge_point.png';
+import icon_rank_up from '../images/VerticalCard/icon_ranking_up.png';
 import img1 from '../images/VerticalCard/img1.png';
 import img2 from '../images/VerticalCard/img2.png';
 import img3 from '../images/VerticalCard/img3.png';
@@ -39,7 +40,6 @@ import img29 from '../images/VerticalCard/img29.png';
 import img30 from '../images/VerticalCard/img30.png';
 import img31 from '../images/VerticalCard/img31.png';
 import img32 from '../images/VerticalCard/img32.png';
-
 
 export const cardList1 = [
     {
@@ -222,6 +222,7 @@ export const cardList5 = [
         icon_number: icon_number,
         icon_time: icon_time,
         up: 11,
+        icon_rank_up: icon_rank_up,
     },
 
     {
@@ -236,6 +237,7 @@ export const cardList5 = [
         icon: icon_up,
         icon_time: icon_time,
         up: 105,
+        icon_rank_up: icon_rank_up,
     },
 
     {
@@ -249,6 +251,7 @@ export const cardList5 = [
         calendar: '월 , 수 , 금, 토 연재',
         icon_time: icon_time,
         up: 3,
+        icon_rank_up: icon_rank_up,
     },
 ];
 

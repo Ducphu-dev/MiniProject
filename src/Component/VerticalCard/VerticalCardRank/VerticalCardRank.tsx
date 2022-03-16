@@ -1,7 +1,6 @@
 import React from 'react';
 import './VerticalCardRank.scss';
 import icon_count from '../../../Assets/images/VerticalCard/icon_read_count.png';
-import icon_rank_up from '../../../Assets/images/VerticalCard/icon_ranking_up.png';
 import useWindowSize from '../useWindowSize';
 type Props = {
     cardItem: any;
@@ -65,7 +64,7 @@ const VerticalCardRank = ({ cardItem }: Props) => {
                 )}
             </div>
             <div className="card-rank-up">
-                <img className="rank-up-img" src={icon_rank_up} alt=""></img>
+                <img className="rank-up-img" src={cardItem.icon_rank_up} alt=""></img>
                 <div className="rank-up-number">{cardItem.up}</div>
             </div>
         </div>
