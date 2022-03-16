@@ -4,7 +4,13 @@
 .block-horizon{
     // width: 100%;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    
     column-gap: 16px;
     flex-wrap: wrap;
+    &.horizontal-5{
+        grid-template-columns: repeat(5,1fr);
+    }
+    &.horizontal-4{
+        grid-template-columns: repeat(4,1fr);
+    }
 }

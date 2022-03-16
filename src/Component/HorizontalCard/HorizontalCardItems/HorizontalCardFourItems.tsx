@@ -7,12 +7,12 @@ import '../../../Assets/style/_reset.scss';
 
 
 
-function HorizontalCardItems(props:any) {
+function HorizontalCardFourItems(props:any) {
     
-    const {items,index}= props
+    const {items,index,noRank}= props
 
     return (
-        <div  className='block-horizon_card' key={index}>
+        <div  className={`block-horizon_card ${noRank}` } key={index}>
             <a href='' className="block-horizon_wrapper">
                 <div className='horizon_card-top'>
                     <div className="card-img">
@@ -20,27 +20,33 @@ function HorizontalCardItems(props:any) {
                             <img src={items.Card_image} alt="" />
                         </div>
                     </div>
-                    <div className="card-overlay">
-                        <div className="card-overlay_rank">
-                            {index >= 5 ? 
-                            <div className='rank'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                                    <path fill="#FFD200" fill-rule="evenodd" stroke="#FFD200" stroke-linejoin="round" d="M6.5.747L4.553 5.221.069 5.33l3.278 3.195-.757 4.416 3.91-2.35 3.91 2.35-.757-4.416L12.93 5.33l-4.484-.108L6.5.747z"/>
-                                </svg>
-                                <p>{items.Card_rank}</p>
-                            </div>
-                            : index+1  + `위` }
-                        </div>
-                        <div className="card-overlay_time">
-                            <img src={Time_icon} alt="" />
-                        </div>
+                    <div className="card-badge">
+                        
+                        {
+                            items.Card_badgeTop ? 
+                            <div className="card-badge_top">
+                                <img src={items.Card_badgeTop} alt="" />
+                            </div> : ""
+                        }
+                        {
+                            items.Card_badgeBottom ? 
+                            <div className="card-badge_bottom">
+                                {items.Card_badgeBottom}
+                            </div> : ""
+                        }
                         
                     </div>
                 </div>
                 <div className='horizon_card-bottom'>
                     <div className='card-title'>
-                        <h3>{items.Card_title}</h3>
+                        {
+                            items.Card_title.Card_title_badge ? 
+                            <div className="card-title_badge">
+                                <img src={items.Card_title.Card_title_badge} alt="" />
+                            </div>: ""
+                        }
                         
+                        <h3>{items.Card_title.Card_title_name}</h3>
                     </div>
                     <div className='card-viewer'>
                         <img src={Viewer_icon} alt="" />
@@ -55,4 +61,4 @@ function HorizontalCardItems(props:any) {
     );
 }
 
-export default HorizontalCardItems;
+export default HorizontalCardFourItems;

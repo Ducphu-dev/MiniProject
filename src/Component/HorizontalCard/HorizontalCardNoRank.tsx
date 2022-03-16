@@ -3,11 +3,11 @@ import React from 'react';
 import './HorizotalCard.scss';
 import '../../Assets/style/_reset.scss';
 
-import HorizontalCardItems from './HorizontalCardItems/HorizontalCardItems';
+import HorizontalCardFourItems from './HorizontalCardItems/HorizontalCardFourItems';
 
 
 
-function HorizontalCard(props:any) {
+function HorizontalCardNoRank(props:any) {
     
     const {HorizontalCard, cols} = props
 
@@ -16,17 +16,19 @@ function HorizontalCard(props:any) {
             {
                 HorizontalCard.map((items:any, index:any) => {
                     return (
-                        <HorizontalCardItems
+                        <HorizontalCardFourItems
                             items={items}
                             index={index}
                             key={index}
+                            noRank={"noRank"}
                         />
                     )
                 }) 
+                .filter((product:any,index:any) => index < 4)
             }
         </div>
         
     );
 }
 
-export default HorizontalCard;
+export default HorizontalCardNoRank;
