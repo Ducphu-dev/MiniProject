@@ -117,7 +117,7 @@
     }
 
     @media screen and (max-width: 1279.98px) {
-        max-width: 1024px;
+        max-width: 1024px!important;
         .card-list {
             display: grid;
             grid-template-columns: 1fr 1fr;

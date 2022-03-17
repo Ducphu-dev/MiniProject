@@ -8,12 +8,15 @@ import RecommendList from '../../Component/RecommendList/RecommendList';
 
 import VerticalCard from '../../Component/VerticalCard/VerticalCard';
 import './Main.scss';
+import HotTrend from '../../Component/HotTrend/HotTrend';
+import { HotTrendList } from '../../Assets/data/HotTrend';
 
 function App(props: any) {
     return (
         <>
             <main>
                 <div className="container">
+                    <HotTrend hotTrendList={HotTrendList}/>
                     <VerticalCard cardList={cardList1} title="기다리면 무료 웹툰" volume="( 3,577 )" />
                     <VerticalCard cardList={cardList2} title="인기 웹툰" volume="( 124 )" />
                     <VerticalCard cardList={cardList3} title="기다리면 무료 소설" volume="( 4,548 )" />
