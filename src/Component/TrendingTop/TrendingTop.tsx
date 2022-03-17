@@ -8,7 +8,7 @@ import CardImage_5 from '../../Assets/images/HorizontalCard/resource (4).png';
 import CardImage_6 from '../../Assets/images/HorizontalCard/resource (5).png';
 import CardImage_7 from '../../Assets/images/HorizontalCard/resource (6).png';
 import CardImage_8 from '../../Assets/images/HorizontalCard/resource (7).png';
-
+import Arrow_icon from '../../Assets/images/HorizontalCard/arrow_icon.svg';
 import '../../Assets/style/_reset.scss';
 import HorizontalCard from '../HorizontalCard/HorizotalCard';
 import './TrendingTop.scss';
@@ -672,8 +672,14 @@ function TrendingTop(props:any) {
             <HorizontalCard
                 HorizontalCard={filterTrending}
                 cols={"horizontal-5"}
+                numberLimited={30}
             />
-            
+            <div className='block-toptrending_btn'>
+                <div className="toptrending_btn">
+                    <div className='toptrending_btn-decs' >수요 연재 더보기</div>    
+                    <img src={Arrow_icon} />
+                </div>
+            </div>
         </div>
         
     );

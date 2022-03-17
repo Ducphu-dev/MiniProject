@@ -8,6 +8,7 @@ import Title_badge from '../../Assets/images/HorizontalCard/title_badge.png';
 import Title_badge_1 from '../../Assets/images/HorizontalCard/title_badge_1.png';
 import Card_badge_time from '../../Assets/images/HorizontalCard/badge_time.png';
 import Card_badge_10min from '../../Assets/images/HorizontalCard/badge_10min.png';
+import Arrow_icon from '../../Assets/images/HorizontalCard/arrow_icon.svg';
 import '../../Assets/style/_reset.scss';
 import HorizontalCardNoRank from '../HorizontalCard/HorizontalCardNoRank';
 import './RecommendList.scss';
@@ -135,13 +136,14 @@ function RecommendList(props:any) {
                 <div className="block-recommend_header-left">
                     <div className="header-link">
                         <a href="">더보기</a>    
-                        <img src="https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e" />
+                        <img src={Arrow_icon} />
                     </div>
                 </div>
             </div>
             <HorizontalCardNoRank
                 HorizontalCard={TopRecommendList}
                 cols={"horizontal-4"}
+                numberLimited={4}
             />
             
             

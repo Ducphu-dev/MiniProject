@@ -106,4 +106,32 @@
             }
         }
     }
+    &_btn{
+        display: flex;
+        justify-content: center;
+        .toptrending_btn{
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 174px;
+            border:  solid 1px #dddddd;
+            border-radius: 20px;
+            cursor: pointer;
+            height: 44px;
+            background-color: #ffffff;
+            -webkit-box-pack: center;
+            justify-content: center;
+            &-decs{
+                margin-right: 5px;
+                color: map-get($color, text-5);
+                font-family: Noto-San-Demi-Light;
+                font-size: 16px;
+            }
+            img{
+                width: 8px;
+                object-fit: contain;
+            }
+        }
+    }
 }

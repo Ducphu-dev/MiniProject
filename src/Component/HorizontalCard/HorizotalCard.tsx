@@ -9,7 +9,7 @@ import HorizontalCardItems from './HorizontalCardItems/HorizontalCardItems';
 
 function HorizontalCard(props:any) {
     
-    const {HorizontalCard, cols} = props
+    const {HorizontalCard, cols, numberLimited} = props
 
     return (
         <div className= {`block-horizon ${ cols }`}>
@@ -22,7 +22,8 @@ function HorizontalCard(props:any) {
                             key={index}
                         />
                     )
-                }) 
+                })
+                .filter((product:any,index:any) => index < numberLimited)
             }
         </div>
         
