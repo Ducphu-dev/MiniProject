@@ -25,7 +25,7 @@ function HorizontalCardItems(props:any) {
                             {index >= 5 ? 
                             <div className='rank'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                                    <path fill="#FFD200" fill-rule="evenodd" stroke="#FFD200" stroke-linejoin="round" d="M6.5.747L4.553 5.221.069 5.33l3.278 3.195-.757 4.416 3.91-2.35 3.91 2.35-.757-4.416L12.93 5.33l-4.484-.108L6.5.747z"/>
+                                    <path fill="#FFD200" fill-rule="evenodd" stroke="#FFD200" strokeLinejoin="round" d="M6.5.747L4.553 5.221.069 5.33l3.278 3.195-.757 4.416 3.91-2.35 3.91 2.35-.757-4.416L12.93 5.33l-4.484-.108L6.5.747z"/>
                                 </svg>
                                 <p>{items.Card_rank}</p>
                             </div>
