@@ -8,7 +8,7 @@ import CardImage_5 from '../../Assets/images/HorizontalCard/resource (4).png';
 import CardImage_6 from '../../Assets/images/HorizontalCard/resource (5).png';
 import CardImage_7 from '../../Assets/images/HorizontalCard/resource (6).png';
 import CardImage_8 from '../../Assets/images/HorizontalCard/resource (7).png';
-
+import Arrow_icon from '../../Assets/images/HorizontalCard/arrow_icon.svg';
 import '../../Assets/style/_reset.scss';
 import HorizontalCard from '../HorizontalCard/HorizotalCard';
 import './TrendingTop.scss';
@@ -677,7 +677,7 @@ function TrendingTop(props:any) {
             <div className='block-toptrending_btn'>
                 <div className="toptrending_btn">
                     <div className='toptrending_btn-decs' >수요 연재 더보기</div>    
-                    <img src="https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e" />
+                    <img src={Arrow_icon} />
                 </div>
             </div>
         </div>
