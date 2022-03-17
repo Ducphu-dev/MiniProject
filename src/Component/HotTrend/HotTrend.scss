@@ -226,13 +226,9 @@
             }
         }
         &-img {
-            // .slick-slide {
-            //     margin: 0 10px;
-            // }
-            // /* the parent */
-            // .slick-list {
-            //     margin: 0 -10px;
-            // }
+            .slick-list {
+                padding: 0 39px !important;
+            }
         }
         .slick-slide.slick-active.slick-center.slick-current {
             margin: 0 15px;
@@ -260,6 +256,18 @@
                     margin: 0 auto;
                 }
             }
+
+        }
+        &-btn {
+            width: 694px;
+        }
+        &-img {
+            .slick-list {
+                padding: 0 25px !important;
+            }
+        }
+        .slick-slide.slick-active.slick-center.slick-current {
+            width: 694px !important;
         }
     }
     @media screen and (max-width: 767.98px) {
