@@ -2,6 +2,7 @@ import { Divider, Tabs } from 'antd';
 import * as React from 'react';
 import BtnSearch from '../../Assets/images/header/btn_search.png';
 import Stage from '../../Assets/images/header/logo-stage.svg';
+import SmallStage from '../../Assets/images/header/mini-logo-stage.svg';
 import Logo from '../../Assets/images/header/logo.svg';
 import MenuHome from '../../Assets/images/header/menu_home.svg';
 import MenuToon from '../../Assets/images/header/menu_toon.svg';
@@ -65,33 +66,38 @@ function Header(props: any) {
             </div>
 
             <div className="cta">
-              <div className="stage">
-                <img src={Stage} alt="Stage" />
-              </div>
+              <a href="/" className="stage">
+                <img src={Stage} alt="Stage" className="stage-img" />
+                <img src={SmallStage} alt="Stage" className="stage-img--sm" />
+              </a>
               <div className="cta-gr">
-                <div className="cta-link">캐시충전</div>
-                <Divider type="vertical" />
-                <div className="cta-link">로그인</div>
+                <a href="/" className="cta-link cta-link--cash">
+                  캐시충전
+                </a>
+                <Divider type="vertical" className="divider" />
+                <a href="/" className="cta-link">
+                  로그인
+                </a>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="header-container">
-        <Tabs className="navigation">
-          {tabList.map((tab) => {
-            return (
-              <TabPane
-                tab={<img className="navigation-image" src={tab.image} />}
-                key={tab.id}
-              >
-                content {tab.id}
-              </TabPane>
-            );
-          })}
-        </Tabs>
-      </div>
+      {/* <div className="header-container"> */}
+      <Tabs className="navigation">
+        {tabList.map((tab) => {
+          return (
+            <TabPane
+              tab={<img className="navigation-image" src={tab.image} />}
+              key={tab.id}
+            >
+              content {tab.id}
+            </TabPane>
+          );
+        })}
+      </Tabs>
+      {/* </div> */}
     </div>
   );
 }
