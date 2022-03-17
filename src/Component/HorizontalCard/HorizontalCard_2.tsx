@@ -3,11 +3,11 @@ import React from 'react';
 import './HorizotalCard.scss';
 import '../../Assets/style/_reset.scss';
 
-import HorizontalCardFourItems from './HorizontalCardItems/HorizontalCardFourItems';
+import HorizontalCardNoRank from './HorizontalCardItems/HorizontalCardNoRank';
 
 
 
-function HorizontalCardNoRank(props:any) {
+function HorizontalCard_2(props:any) {
     
     const {HorizontalCard, cols,numberLimited} = props
 
@@ -16,7 +16,7 @@ function HorizontalCardNoRank(props:any) {
             {
                 HorizontalCard.map((items:any, index:any) => {
                     return (
-                        <HorizontalCardFourItems
+                        <HorizontalCardNoRank
                             items={items}
                             index={index}
                             key={index}
@@ -31,4 +31,4 @@ function HorizontalCardNoRank(props:any) {
     );
 }
 
-export default HorizontalCardNoRank;
+export default HorizontalCard_2;

@@ -1,19 +1,22 @@
 .header-wrapper {
   //header
+  $header-height: 80px;
   .header {
-    $header-height: 80px;
     display: flex;
     align-items: center;
     height: $header-height;
     width: 100%;
-    margin-top: 5px;
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
     &-container {
       display: flex;
       align-items: center;
       width: 100%;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto;
+      margin-top: 5px;
       .logo {
         margin-right: auto;
       }
@@ -51,6 +54,9 @@
       align-items: center;
       .stage {
         margin-left: 24px;
+        .stage-img--sm {
+          display: none;
+        }
       }
       &-gr {
         display: flex;
@@ -69,12 +75,33 @@
   //navigation
   .navigation {
     width: 100%;
+    .ant-tabs-nav {
+      margin-bottom: 0;
+      position: fixed;
+      top: $header-height;
+      width: 100%;
+      z-index: 10;
+      &-wrap {
+        background-color: #fff;
+      }
+      &-list {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+    }
+    .ant-tabs-content-holder {
+      margin-top: 167px;
+    }
+    .ant-tabs-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
     .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list {
       width: 100%;
       .ant-tabs-tab {
-        padding: 30px 0 15px 0;
+        padding: 30px 0 15px;
         margin: 0;
-        flex: 1;
+        flex: 1 1 auto;
         justify-content: center;
       }
       .ant-tabs-ink-bar {
@@ -85,25 +112,38 @@
   }
 
   @media screen and (max-width: 768px) {
-    #header {
-      &.header {
-        height: auto !important;
-      }
+    .header {
       .header-container {
-        padding: 16px;
-        flex-direction: column;
-        height: auto;
-        .logo {
-          margin: auto;
-          margin-bottom: 24px;
-        }
+        padding: 0 15px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .header {
+      .header-container {
         .menu {
-          flex-direction: row-reverse;
-          width: 100%;
-          justify-content: space-between;
+          .search-box {
+            border: none;
+            form {
+              display: none;
+            }
+            &-icon {
+              position: relative;
+              transform: translateY(0);
+            }
+          }
           .cta {
             .stage {
-              margin-left: 0;
+              margin-left: 30px;
+              .stage-img {
+                display: none;
+              }
+              .stage-img--sm {
+                display: block;
+                width: 21px;
+                height: 24px;
+              }
             }
           }
         }
@@ -111,20 +151,19 @@
     }
   }
 
-  @media screen and (max-width: 525px) {
-    #header {
-      .header-container {
+  @media screen and (max-width: 564px) {
+    .header {
+      &-container {
         .menu {
-          flex-direction: column;
-          width: 100%;
-          gap: 16px;
-          .search-box {
-            width: 100%;
-          }
           .cta {
-            width: 100%;
-            .stage {
-              margin-right: auto;
+            &-gr {
+              margin-left: 14px;
+              .divider {
+                display: none;
+              }
+              .cta-link.cta-link--cash {
+                display: none;
+              }
             }
           }
         }
