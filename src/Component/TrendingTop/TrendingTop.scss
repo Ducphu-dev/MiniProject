@@ -3,17 +3,25 @@
     background-color: #fff;
     padding: 15px 16px;
     margin-bottom: 15px;
-    p{
+    p,h3,ul{
         margin-bottom: 0px;
     }
     &_header{
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        @media (max-width:640px) {
+            margin-bottom: 7px;
+            
+        }
         &-right{
             display: flex;
             align-items: center;
+            @media (max-width:640px) {
+                display: none;
+                
+            }
             .header-title{
+                
                 &>*{
                     color: map-get($color, text-2 );
                     font-size: 20px;
@@ -33,10 +41,22 @@
             display: flex;
             align-items: center;
             margin-left: auto;
+            @media (max-width:640px) {
+                margin: auto;
+                border-radius: 28px;
+                box-shadow: inset 0px 0px 0px 1px #ebebeb;
+                background-color: map-get($color, bg-3 );
+            }
             .header-sort_items{
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+                
+                @media (max-width:640px) {
+                    border-radius: 28px;
+                    
+                    padding: 6px 16px;
+                }
                 .dot{
                     box-sizing: border-box;
                     margin: 0;
@@ -48,27 +68,40 @@
                     -webkit-align-self: center;
                     -ms-flex-item-align: center;
                     align-self: center;
-                    margin-left: 2px;
+                    margin-left: 3px;
                     margin-right: 3px;
                 }
                 &:not(:last-child){
                     margin-right: 10px;
+                    @media (max-width:640px) {
+                        margin-right: unset;
+                    }
                 }
                 &>*{
                     color: map-get($color, text-3 );
                     font-size: 18px;
-                    font-family:Noto-San-Light ;
-                    
+                    font-family:Noto-San-Bold ;
+                    @media (max-width:640px) {
+                        font-size: 12px;
+                    }
                 }
                 svg{
                     width: 20px;
                     height: 20px;
+                    @media (max-width:640px) {
+                        width: 15px;
+                        height: 15px;
+                    }
                 }
                 &.active{
+                    background-color: map-get($color, w );
+                    
+                    @media (max-width:640px) {
+                        box-shadow: inset 0px 0px 0px 1px #333333;
+                    }
                     &>*{
                         color: map-get($color, text-2 );
-                        font-size: 18px;
-                        font-family:Noto-San-Light ;
+                        
                     }
                     svg{
                         path{
@@ -87,7 +120,11 @@
             align-items: center;
            
             position: relative;
-            margin: 20px 0;
+            margin-top: 15px;
+            margin-bottom: 20px ;
+            @media (max-width:640px) {
+                margin-bottom: 10px ;
+            }
             &-items{
                 cursor: pointer;
                 flex: 1;
@@ -99,6 +136,12 @@
                 position: relative;
                 z-index: 1;
                 border-bottom: 1px solid #f1f1f1;
+                font-family:Noto-San-Demi-Light ;
+                @media (max-width:640px) {
+                    font-size: 14px;
+                    padding-top: 11px;
+                    padding-bottom: 11px;
+                }
                 &.active{
                     color: map-get($color, text-2 );
                     border-bottom: 2px solid #ffd200;
@@ -122,15 +165,26 @@
             background-color: #ffffff;
             -webkit-box-pack: center;
             justify-content: center;
+            @media (max-width:640px) {
+                min-width: 128px;
+                height: 40px;
+            }
+            
             &-decs{
-                margin-right: 5px;
+                margin-right: 10px;
                 color: map-get($color, text-5);
                 font-family: Noto-San-Demi-Light;
                 font-size: 16px;
+                @media (max-width:640px) {
+                    font-size: 12px;
+                }
             }
             img{
                 width: 8px;
                 object-fit: contain;
+                @media (max-width:640px) {
+                    width: 5px;
+                }
             }
         }
     }

@@ -11,6 +11,10 @@
             &-top{
                 .card-img{
                     padding-bottom: 140%;
+                    @media (max-width:1280px) {
+                        padding-bottom: 70%;
+                        
+                    }
                 }
                 .card-badge{
                     position: absolute;
@@ -25,7 +29,8 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: 30px;
+                        width: 20%;
+                        max-width: 40px;
                         height: auto;
                         img{
                             width: 100%;
@@ -89,35 +94,64 @@
                 background-color: map-get($color, bg-1 );
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                min-height: 21px;
+                @media (max-width:640px) {
+                    padding: 0 8px;
+                }
                 &_rank{
                     color: map-get($color, text-1);
                     font-size: 16px;
                     font-family:Noto-San-Demi-Light ;
+                    @media (max-width:640px) {
+                        font-size: 12px;
+                        
+                    }
                     .rank{
                         display: flex;
                         align-items: center;
+                        
                         svg{
                             margin-right: 5px;
+                            @media (max-width:640px) {
+                                margin-right: 3px;
+                                width: 11px;
+                                height: 11px;
+                                
+                            }
                         }
                     }
                 }
                 &_time{
+                    display: flex;
+                    align-items: center;
                     width: 16px;
-                    height: auto;
+                    height: 100%;
                     margin-left: auto;
+                    line-height: unset;
+                    @media (max-width:640px) {
+                        width: 13px;
+                        height: 13px;
+                        
+                    }
+                    img{
+                        vertical-align: unset;
+                        object-fit: contain;
+                    }
                 }
                 
             }
 
         }
         &-bottom{
-            &>*{
-                margin-top: 10px;
+            margin-top: 10px;
+            @media (max-width:640px) {
+                margin-top: 7px;
+                
             }
             .card-title{
                 display: flex;
                 align-items: center;
+                
                 &_badge{
                     display: flex;
                     align-items: center;
@@ -136,21 +170,39 @@
                     color: map-get($color, text-2 );
                     font-size: 16px;
                     font-family:Noto-San-Demi-Light ;
+                    @media (max-width:640px) {
+                        font-size: 13px;
+                        
+                    }
                 }
                 
             }
             .card-viewer{
                 display: flex;
                 align-items: center;
+                margin-top: 6px;
+                @media (max-width:640px) {
+                    margin-top: 3px;
+                    
+                }
                 img{
-                    width: 14px;
-                    height: 14px;
+                    width: auto;
+                    height: 13px;
                     object-fit: contain;
+                    @media (max-width:640px) {
+                        width: 10px;
+                        height: 10px;
+                        
+                    }
                 }
                 &>*{
                     color: map-get($color, text-3 );
                     font-size: 14px;
                     font-family:Noto-San-Light ;
+                    @media (max-width:640px) {
+                        font-size: 12px;
+                        
+                    }
                     &:not(:last-child){
                         margin-right: 4px;
                     }

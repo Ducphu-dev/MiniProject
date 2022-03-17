@@ -43,6 +43,18 @@ function HorizontalCardItems(props:any) {
                         
                     </div>
                     <div className='card-viewer'>
+                        {
+                            items.Card_badge.Card_badge_1 ? 
+                            <img src={items.Card_badge.Card_badge_1} alt="" />
+                            : ""
+
+                        }
+                        {
+                            items.Card_badge.Card_badge_2 ? 
+                            <img src={items.Card_badge.Card_badge_2} alt="" />
+                            : ""
+
+                        }
                         <img src={Viewer_icon} alt="" />
                         <p>{items.Card_viewer}만명</p>
                     </div>
