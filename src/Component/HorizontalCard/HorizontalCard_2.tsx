@@ -12,7 +12,7 @@ function HorizontalCard_2(props:any) {
     const {HorizontalCard, cols,numberLimited} = props
 
     return (
-        <div className= {`block-horizon ${ cols }`}>
+        <div className= {`block-horizon ${ cols } `}>
             {
                 HorizontalCard.map((items:any, index:any) => {
                     return (

@@ -1,7 +1,7 @@
 @import "../../Assets/style/variables";
 .block-toptrending{
     background-color: #fff;
-    padding: 15px 16px;
+    // padding: 15px 16px;
     margin-bottom: 15px;
     p,h3,ul{
         margin-bottom: 0px;
@@ -9,6 +9,9 @@
     &_header{
         display: flex;
         align-items: center;
+        padding-top: 22px;
+        padding-left:  20px ;
+        padding-right:  20px ;
         @media (max-width:640px) {
             margin-bottom: 7px;
             

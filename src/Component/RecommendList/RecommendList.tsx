@@ -10,9 +10,9 @@ import './RecommendList.scss';
 
 function RecommendList(props:any) {
 
-    const {TopRecommendList,title,title_1,numberLimited,cols} = props
+    const {TopRecommendList,title,title_1,numberLimited,cols,mobile_black} = props
     return (
-        <div className='block-recommend'>
+        <div className={ `block-recommend ${mobile_black}`}>
             <div className='block-recommend_header'>
                 <div className="block-recommend_header-right">
                     <div className="header-title">

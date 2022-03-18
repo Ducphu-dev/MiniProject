@@ -24,6 +24,7 @@ import RecommendList from '../../../../Component/RecommendList/RecommendList';
 import ScrollBanner from '../../../../Component/ScrollBanner/ScrollBanner';
 import TrendingTop from '../../../../Component/TrendingTop/TrendingTop';
 import VerticalCard from '../../../../Component/VerticalCard/VerticalCard';
+import BannerAdv from '../../../../Component/BannerAdv/BannerAdv';
 
 function Home() {
   return (
@@ -81,8 +82,10 @@ function Home() {
         title_1="최신/인기"
         numberLimited={4}
         cols={'horizontal-4'}
+        mobile_black={'mobile_black'}
       />
       <Recommend img={RecommendListImg} />
+      <BannerAdv/>
     </>
   );
 }

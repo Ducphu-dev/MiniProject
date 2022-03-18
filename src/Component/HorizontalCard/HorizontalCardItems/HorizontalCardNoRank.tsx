@@ -12,7 +12,7 @@ function HorizontalCardFourItems(props:any) {
     const {items,index,noRank}= props
 
     return (
-        <div  className={`block-horizon_card ${noRank}` } key={index}>
+        <div  className={`block-horizon_card ${noRank} `  } key={index}>
             <a href='' className="block-horizon_wrapper">
                 <div className='horizon_card-top'>
                     <div className="card-img">

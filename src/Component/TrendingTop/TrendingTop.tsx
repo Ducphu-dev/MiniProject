@@ -15,12 +15,12 @@ function TrendingTop(props:any) {
     const SortHeader = [
         {
             sort_name:"웹툰",
-            sort_key: 1,
+            sort_key: 0,
             sort_active: true
         },
         {
             sort_name:"웹소설",
-            sort_key: 2,
+            sort_key: 1,
             sort_active: false
         }
     ]
@@ -68,13 +68,22 @@ function TrendingTop(props:any) {
     ]
     const [filterTrending, setfilterTrending] = useState<any>([])
     const [toggleTabs, setToggleTabs] = useState(0)
+    const [toggleTabsHead, setToggleTabsHead] = useState(0)
+
+    const changeTabHead = (index:any,items:any) =>{
+        setToggleTabsHead(index)
+        // changTopTrending(index)
+    }
+
     const changeTabRecommend = (index:any,items:any) =>{
         setToggleTabs(index)
         FilterTrending(items.sort_key)
     }
     
+    
     useEffect(() => {
         FilterTrending(0)
+        // changTopTrending(0)
     }, [])
 
 
@@ -92,7 +101,20 @@ function TrendingTop(props:any) {
         setfilterTrending(filter)
     }
 
-    
+
+    let TopTrendingSection 
+    // function changTopTrending (index:any){
+    //     if(index === 0){
+    //         console.log(index)
+    //         TopTrendingSection =
+    //     } if(index === 1){
+    //         TopTrendingSection =  <HorizontalCard
+    //         HorizontalCard={TopTrendingList}
+    //         cols={"horizontal-5"}
+    //         numberLimited={numberLimited}
+    //         toggleTabs={toggleTabs}/>
+    //     }
+    // }
     
 
     
@@ -111,7 +133,7 @@ function TrendingTop(props:any) {
                     {
                         SortHeader.map((items:any, index:any)=>{
                             return (
-                                <li className= {`header-sort_items ${ items.sort_active === true ? "active":"" }`} key={index}>
+                                <li onClick={()=>changeTabHead(index,items)} className= {`header-sort_items  ${ toggleTabsHead === index ? "active":"" }`} key={index}>
                                     <p>{items.sort_name}</p>
                                     <div className='dot'></div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -137,10 +159,12 @@ function TrendingTop(props:any) {
                 </ul>
             </div>
             <HorizontalCard
-                HorizontalCard={filterTrending}
-                cols={"horizontal-5"}
-                numberLimited={numberLimited}
+            HorizontalCard={filterTrending}
+            cols={"horizontal-5"}
+            numberLimited={numberLimited}
+            toggleTabs={toggleTabs}
             />
+           
             {
                 btn ? 
                 <div className='block-toptrending_btn'>
