@@ -36,7 +36,12 @@ function CallToActionButtons() {
     <section className="call-to-action">
       <div className="call-to-action-container">
         {data.map((item) => (
-          <CTAButton title={item.title} quantity={item.label} url={item.url} />
+          <CTAButton
+            key={item.id}
+            title={item.title}
+            quantity={item.label}
+            url={item.url}
+          />
         ))}
       </div>
     </section>
