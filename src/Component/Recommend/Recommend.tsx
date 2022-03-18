@@ -40,7 +40,7 @@ const Recommend = ({ img }: Props) => {
           </div>
         </div>
         <div className="recommend-img">
-          {width < 1366 ? (
+          {width <= 1024 ? (
             <div className="recommend-img-list">
               {img.map((item: any, index: number) => (
                 <div key={index} className="recommend-img-main">
