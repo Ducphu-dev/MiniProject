@@ -58,7 +58,7 @@ function ScrollBanner() {
     <section className="scroll-banner">
       <div className="scroll-banner-container">
         {isDesktop ? (
-          <Carousel arrows {...settings} centerMode centerPadding="60px">
+          <Carousel arrows {...settings} centerMode centerPadding="30px">
             {data.map((item) => (
               <BanneItem src={item.src} label={item.label} key={item.id} />
             ))}

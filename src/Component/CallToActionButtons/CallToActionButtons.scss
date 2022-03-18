@@ -1,7 +1,6 @@
 .call-to-action {
   background-color: #fff;
   padding: 20px;
-  margin-top: 11px;
   &-container {
     border-radius: 8px;
     overflow: hidden;
@@ -45,9 +44,14 @@
     }
   }
 
-  @media screen and (max-width: 678px) {
+  @media screen and (max-width: 768px) {
     .cta-content {
       height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 678px) {
+    .cta-content {
       .cta-title {
         font-size: 14px;
       }

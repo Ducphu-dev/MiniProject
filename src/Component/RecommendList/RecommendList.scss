@@ -1,97 +1,98 @@
-@import "../../Assets/style/variables";
-.block-recommend{
-    background-color: #fff;
-    padding: 15px 16px;
+@import '../../Assets/style/variables';
+.block-recommend {
+  background-color: #fff;
+  padding: 15px 16px;
+  // margin-bottom: 15px;
+  margin-top: 11px;
+  p,
+  h3 {
+    margin-bottom: 0px;
+  }
+  &_header {
+    display: flex;
+    align-items: center;
     margin-bottom: 15px;
-    p,h3{
-        margin-bottom: 0px;
-    }
-    &_header{
+    &-right {
+      display: flex;
+      align-items: center;
+      .header-title {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
-        &-right{
-            display: flex;
-            align-items: center;
-            .header-title{
-                display: flex;
-                align-items: center;
-                &>*{
-                    color: map-get($color, text-2 );
-                    font-size: 20px;
-                    font-family:Noto-San-Demi-Light ;
-                    position: relative;
-                    &.bold{
-                        font-family:Noto-San-Bold ;
-                    }
-                }
-                .title-dash{
-                    box-sizing: border-box;
-                    margin: 0;
-                    min-width: 0;
-                    width: 4.5px;
-                    height: 16px;
-                    font-size: 16px;
-                    color: #d3d3d3;
-                    line-height: 1;
-                    overflow: hidden;
-                    margin-left: 5px;
-                    margin-right: 5px;
-                }
-            }
-            .header-amount{
-                &>*{
-                    color: map-get($color, text-3 );
-                    font-size: 14px;
-                    font-family:Noto-San-Light ;
-                    margin-left: 5px;
-                }
-            }
+        & > * {
+          color: map-get($color, text-2);
+          font-size: 20px;
+          font-family: Noto-San-Demi-Light;
+          position: relative;
+          &.bold {
+            font-family: Noto-San-Bold;
+          }
         }
-        &-left{
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-            .header-link{
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                &>*{
-                    color: map-get($color, text-5 );
-                    font-size: 18px;
-                    font-family:Noto-San-Demi-Light ;
-                    margin-left: 5px;
-                }
-                img{
-                    width: 10px;
-                }
-            }
+        .title-dash {
+          box-sizing: border-box;
+          margin: 0;
+          min-width: 0;
+          width: 4.5px;
+          height: 16px;
+          font-size: 16px;
+          color: #d3d3d3;
+          line-height: 1;
+          overflow: hidden;
+          margin-left: 5px;
+          margin-right: 5px;
         }
-        
+      }
+      .header-amount {
+        & > * {
+          color: map-get($color, text-3);
+          font-size: 14px;
+          font-family: Noto-San-Light;
+          margin-left: 5px;
+        }
+      }
     }
-    &_nav{
-        .trending_nav{
-            display: flex;
-            align-items: center;
-           
-            position: relative;
-            margin: 20px 0;
-            &-items{
-                cursor: pointer;
-                flex: 1;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                font-size: 20px;
-                text-align: center;
-                color: map-get($color, text-4 );
-                position: relative;
-                z-index: 1;
-                border-bottom: 1px solid #f1f1f1;
-                &.active{
-                    color: map-get($color, text-2 );
-                    border-bottom: 2px solid #ffd200;
-                }
-            }
+    &-left {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      .header-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        & > * {
+          color: map-get($color, text-5);
+          font-size: 18px;
+          font-family: Noto-San-Demi-Light;
+          margin-left: 5px;
         }
+        img {
+          width: 10px;
+        }
+      }
     }
+  }
+  &_nav {
+    .trending_nav {
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      margin: 20px 0;
+      &-items {
+        cursor: pointer;
+        flex: 1;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        text-align: center;
+        color: map-get($color, text-4);
+        position: relative;
+        z-index: 1;
+        border-bottom: 1px solid #f1f1f1;
+        &.active {
+          color: map-get($color, text-2);
+          border-bottom: 2px solid #ffd200;
+        }
+      }
+    }
+  }
 }
