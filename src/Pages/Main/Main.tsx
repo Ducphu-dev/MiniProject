@@ -25,6 +25,8 @@ import VerticalCard from '../../Component/VerticalCard/VerticalCard';
 import './Main.scss';
 import CallToActionButtons from '../../Component/CallToActionButtons/CallToActionButtons';
 import ScrollBanner from '../../Component/ScrollBanner/ScrollBanner';
+import HotTrend from '../../Component/HotTrend/HotTrend';
+import { HotTrendList } from '../../Assets/data/HotTrend';
 
 function App(props: any) {
   // return (
@@ -54,7 +56,7 @@ function App(props: any) {
     <>
       <main>
         <div className="container">
-          <ScrollBanner />
+            <HotTrend hotTrendList={HotTrendList} />
           <CallToActionButtons />
           <VerticalCard
             cardList={cardList1}
@@ -76,6 +78,7 @@ function App(props: any) {
             title="인기 웹 소설"
             volume="( 82 )"
           />
+          <ScrollBanner />
           <VerticalCard
             cardList={cardList5}
             title="실시간 랭킹"
