@@ -126,7 +126,7 @@
                         display: flex;
                         align-content: center;
                         &>*{
-                            margin-bottom: 5px;
+                            margin-bottom: map-get($space,5);
                         }
                         @media (max-width:640px) {
                             flex-direction: column;
