@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import Header from '../../Component/Header/Header';
+import Footer from '../../Component/Footer/Footer';
 import { RouterString } from '../../Component/Modules/routesString';
 import pages from './pages';
 
@@ -39,6 +40,7 @@ function RouterWrapper() {
         })}
         <Redirect to={RouterString.PageNotFound} />
       </Switch>
+      <Footer/>
     </>
   );
 }

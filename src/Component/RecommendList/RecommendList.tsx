@@ -7,10 +7,10 @@ import HorizontalCard_2 from '../HorizontalCard/HorizontalCard_2';
 import './RecommendList.scss';
 
 
+
 function RecommendList(props:any) {
 
     const {TopRecommendList,title,title_1,numberLimited,cols} = props
-    console.log(title.length)
     return (
         <div className='block-recommend'>
             <div className='block-recommend_header'>
