@@ -12,11 +12,11 @@ type Props = {
 };
 
 const Recommend = ({ img }: Props) => {
-    const [indexOfList, setIndexOfList] = useState(0);
+    const [indexOfList, setIndexOfList] = useState(1);
     const { width, height } = useWindowSize();
     const carouselRef = useRef<any>();
     const onChange = (number: number) => {
-        setIndexOfList(number);
+        setIndexOfList(number+1);
     };
     const handleNext = () => {
         carouselRef.current.next();

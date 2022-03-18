@@ -350,7 +350,7 @@ export const cardList8 = [
 
 export const cardList9 = [
     {
-        img: img29,
+        img: img31,
         title: '사내 맞선',
         content: '',
         view: '4.2 만명',
