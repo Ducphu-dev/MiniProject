@@ -26,6 +26,9 @@ import TrendingTop from '../../../../Component/TrendingTop/TrendingTop';
 import VerticalCard from '../../../../Component/VerticalCard/VerticalCard';
 import BannerAdv from '../../../../Component/BannerAdv/BannerAdv';
 
+import BannerAdvImg from '../../../../Assets/images/BannerAdv/resource.png';
+import BannerAdvImg_1 from '../../../../Assets/images/BannerAdv/resource (1).png';
+
 function Home() {
   return (
     <>
@@ -50,6 +53,8 @@ function Home() {
         volume=""
         rank={true}
       />
+      <BannerAdv BannerAdvImg={BannerAdvImg}/>
+      
       <TrendingTop
         TopTrendingList={TopTrendingList}
         title="기다리면 무료 VOD"
@@ -60,9 +65,11 @@ function Home() {
         cardList={cardList6}
         title="도전 ! 밀리언 페이지 웹툰"
         volume=""
+      
       />
       <VerticalCard cardList={cardList7} title="밀리언 페이지 소설" volume="" />
       <VerticalCard cardList={cardList8} title="화제 의 베스트셀러" volume="" />
+      <BannerAdv BannerAdvImg={BannerAdvImg_1} bg="#9284b0"/>
       <RecommendList
         TopRecommendList={TopRecommendList}
         title={['기다리면 무료 VOD']}
@@ -85,7 +92,6 @@ function Home() {
         mobile_black={'mobile_black'}
       />
       <Recommend img={RecommendListImg} />
-      <BannerAdv/>
     </>
   );
 }

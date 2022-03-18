@@ -1,7 +1,7 @@
 @import "../../Assets/style/variables";
 .block-recommend{
     background-color: #fff;
-    margin-bottom: 15px;
+    margin-top: 11px;
     &.mobile_black{
         @media (max-width:1024px) {
             background-color: map-get($color, bg-1 );
@@ -85,31 +85,60 @@
                 }
             }
         }
-        
-    }
-    &_nav{
-        .trending_nav{
-            display: flex;
-            align-items: center;
-           
-            position: relative;
-            margin: 20px 0;
-            &-items{
-                cursor: pointer;
-                flex: 1;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                font-size: 20px;
-                text-align: center;
-                color: map-get($color, text-4 );
-                position: relative;
-                z-index: 1;
-                border-bottom: 1px solid #f1f1f1;
-                &.active{
-                    color: map-get($color, text-2 );
-                    border-bottom: 2px solid #ffd200;
-                }
-            }
+      
+      .header-amount {
+        & > * {
+          color: map-get($color, text-3);
+          font-size: 14px;
+          font-family: Noto-San-Light;
+          margin-left: 5px;
         }
+      }
+    
+    &-left {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      .header-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        & > * {
+          color: map-get($color, text-5);
+          font-size: 18px;
+          font-family: Noto-San-Demi-Light;
+          margin-left: 5px;
+        }
+        img {
+          width: 10px;
+        }
+      }
     }
+}
+  &_nav {
+    .trending_nav {
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      margin: 20px 0;
+      &-items {
+        cursor: pointer;
+        flex: 1;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        text-align: center;
+        color: map-get($color, text-4);
+        position: relative;
+        z-index: 1;
+        border-bottom: 1px solid #f1f1f1;
+        &.active {
+          color: map-get($color, text-2);
+          border-bottom: 2px solid #ffd200;
+        }
+      }
+    }
+  }
+
 }

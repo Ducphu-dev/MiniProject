@@ -1,13 +1,13 @@
 import * as React from 'react';
 import './BannerAdv.scss';
-import BannerAdv_1 from '../../Assets/images/BannerAdv/resource.png'
+// import BannerAdv_1 from '../../Assets/images/BannerAdv/resource.png'
 
-function BannerAdv() {
+function BannerAdv(props:any) {
 
-  
+  const {BannerAdvImg,bg} =props
     return (
-      <div className='BannerAdv'>
-          <img src={BannerAdv_1} alt="" />
+      <div className='BannerAdv' style={{background:`${bg}`}}>
+          <img src={BannerAdvImg} alt="" />
       </div>
     );
 }

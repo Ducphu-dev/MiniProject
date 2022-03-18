@@ -28,7 +28,7 @@ const HotTrend = ({ hotTrendList }: Props) => {
     carouselRef.current.prev();
   };
   useLayoutEffect(() => {
-    if (width < 1377) {
+    if (width <= 1024) {
       setCenterMode(true);
     } else {
       setCenterMode(false);

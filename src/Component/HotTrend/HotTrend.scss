@@ -200,17 +200,21 @@
   .none-btn {
     bottom: 30px;
   }
+  @media screen and (min-width: 1351px) {
+  }
+
   @media screen and (max-width: 1350.98px) {
     &-btn {
       height: 25px;
     }
+
     .trend-img {
       // .slick-list {
       //     padding: 0 0 !important;
       // }
     }
   }
-  @media screen and (max-width: 1279.98px) {
+  @media screen and (max-width: 1024px) {
     background-color: #fff;
     .slide-btn-item {
       display: none !important;
