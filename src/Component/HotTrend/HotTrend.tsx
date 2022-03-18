@@ -13,7 +13,7 @@ const HotTrend = ({ hotTrendList }: Props) => {
     const [indexOfList, setIndexOfList] = useState(1);
     const [btnItem, setBtnItem] = useState(true);
     const { width, height } = useWindowSize();
-    const [ centerMode, setCenterMode ] = useState(false);
+    const [centerMode, setCenterMode] = useState(false);
     const carouselRef = useRef<any>();
     const onChange = (number: number) => {
         setIndexOfList(number + 1);
@@ -37,57 +37,45 @@ const HotTrend = ({ hotTrendList }: Props) => {
         } else {
             setCenterMode(false);
         }
-    },[width]);
+    }, [width]);
 
     return (
         <div className="trend">
             <Card className="trend-card">
                 <div className="trend-img">
-                    {/* {width < 1366 ? (
-                        <div className="trend-img-list">
-                            {hotTrendList.map((item: any, index: number) => (
-                                <div key={index} className="trend-img-main">
-                                    <img src={item.img} alt="" />
-                                </div>
-                            ))}
-                        </div>
-                    ) : (
-                        <> */}
-                            <Carousel centerMode={centerMode} speed={200} useTransform className="img-list" afterChange={onChange} ref={carouselRef}>
-                                {hotTrendList.map((item: any, index: number) => (
-                                    <div key={index}>
-                                        <img className="img-main" src={item.img} alt="" />
-                                        {item.text_btn ? <div className="trend-btn">{item?.text_btn}</div> : null}
-                                        <div className="trend-content">
-                                            <div className="trend-text1">{item.text1}</div>
-                                            <div className="trend-text2">{item.text2}</div>
-                                            <div className="trend-icon">
-                                                {item.icon ? <img className="trend-icon-1" src={item.icon} alt="" /> : null}
-                                                <div className="trend-icon-time">
-                                                    {item.icon_time ? <img src={item?.icon_time} alt="" /> : null}
-                                                    <div className="trend-icon-text-time">{item.text_time}</div>
-                                                </div>
-                                                {item.icon_line ? <img className="trend-icon-line" src={item.icon_icon_line} alt="" /> : null}
-                                                <div className="trend-icon-person">
-                                                    {item.icon_person ? <img src={item.icon_person} alt="" /> : null}
-                                                    <div className="trend-icon-text-person">{item.text_view}</div>
-                                                </div>
-                                            </div>
+                    <Carousel centerMode={centerMode} speed={200} useTransform className="img-list" afterChange={onChange} ref={carouselRef}>
+                        {hotTrendList.map((item: any, index: number) => (
+                            <div key={index}>
+                                <img className="img-main" src={item.img} alt="" />
+                                {item.text_btn ? <div className="trend-btn">{item?.text_btn}</div> : null}
+                                <div className="trend-content">
+                                    <div className="trend-text1">{item.text1}</div>
+                                    <div className="trend-text2">{item.text2}</div>
+                                    <div className="trend-icon">
+                                        {item.icon ? <img className="trend-icon-1" src={item.icon} alt="" /> : null}
+                                        <div className="trend-icon-time">
+                                            {item.icon_time ? <img src={item?.icon_time} alt="" /> : null}
+                                            <div className="trend-icon-text-time">{item.text_time}</div>
+                                        </div>
+                                        {item.icon_line ? <img className="trend-icon-line" src={item.icon_icon_line} alt="" /> : null}
+                                        <div className="trend-icon-person">
+                                            {item.icon_person ? <img src={item.icon_person} alt="" /> : null}
+                                            <div className="trend-icon-text-person">{item.text_view}</div>
                                         </div>
                                     </div>
-                                ))}
-                            </Carousel>
-                            <img src={prevImg} alt="" className="btn-prev" onClick={() => handlePrev()}></img>
-                            <div className={`trend-btn-slide ${btnItem ? '' : 'none-btn'}`}>
-                                <div className="slide-btn-item">
-                                    <div className="slide-number">{indexOfList}</div>
-                                    <p className="slide-number">/</p>
-                                    <div className="slide-number">{hotTrendList.length}</div>
                                 </div>
                             </div>
-                            <img src={nextImg} alt="" className="btn-next" onClick={() => handleNext()}></img>
-                        {/* </>
-                    )} */}
+                        ))}
+                    </Carousel>
+                    <img src={prevImg} alt="" className="btn-prev" onClick={() => handlePrev()}></img>
+                    <div className={`trend-btn-slide ${btnItem ? '' : 'none-btn'}`}>
+                        <div className="slide-btn-item">
+                            <div className="slide-number">{indexOfList}</div>
+                            <p className="slide-number">/</p>
+                            <div className="slide-number">{hotTrendList.length}</div>
+                        </div>
+                    </div>
+                    <img src={nextImg} alt="" className="btn-next" onClick={() => handleNext()}></img>
                 </div>
             </Card>
         </div>

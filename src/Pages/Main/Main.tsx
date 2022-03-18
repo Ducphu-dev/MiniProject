@@ -11,6 +11,8 @@ import RecommendList from '../../Component/RecommendList/RecommendList';
 import VerticalCard from '../../Component/VerticalCard/VerticalCard';
 import './Main.scss';
 import CallToActionButtons from '../../Component/CallToActionButtons/CallToActionButtons';
+import HotTrend from '../../Component/HotTrend/HotTrend';
+import { HotTrendList } from '../../Assets/data/HotTrend';
 
 function App(props: any) {
     // return (
@@ -40,6 +42,7 @@ function App(props: any) {
     <>
       <main>
         <div className="container">
+            <HotTrend hotTrendList={HotTrendList} />
           <CallToActionButtons />
           <VerticalCard
             cardList={cardList1}
