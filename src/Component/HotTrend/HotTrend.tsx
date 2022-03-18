@@ -43,7 +43,7 @@ const HotTrend = ({ hotTrendList }: Props) => {
         <div className="trend">
             <Card className="trend-card">
                 <div className="trend-img">
-                    <Carousel centerMode={centerMode} speed={200} useTransform className="img-list" afterChange={onChange} ref={carouselRef}>
+                    <Carousel centerMode={centerMode} infinite autoplay speed={200} useTransform className="img-list" afterChange={onChange} ref={carouselRef}>
                         {hotTrendList.map((item: any, index: number) => (
                             <div key={index}>
                                 <img className="img-main" src={item.img} alt="" />
