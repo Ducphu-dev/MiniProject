@@ -54,7 +54,7 @@ function App(props: any) {
   // );
   return (
     <>
-      <main>
+      {/* <main>
         <div className="container">
             <HotTrend hotTrendList={HotTrendList} />
           <CallToActionButtons />
@@ -128,7 +128,7 @@ function App(props: any) {
           />
           <Recommend img={RecommendListImg} />
         </div>
-      </main>
+      </main> */}
       {/* <Footer/> */}
     </>
   );

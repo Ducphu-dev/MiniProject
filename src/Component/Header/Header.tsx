@@ -11,6 +11,7 @@ import MenuVod from '../../Assets/images/header/menu_vod.svg';
 import MenuBroadcast from '../../Assets/images/header/menu_broadcast.svg';
 import MenuBook from '../../Assets/images/header/menu_book.svg';
 import './Header.scss';
+import Home from '../../Pages/Main/Tabs/Home/Home';
 
 const { TabPane } = Tabs;
 const tabList = [
@@ -41,7 +42,7 @@ const tabList = [
   },
   {
     id: 6,
-    title: 'broadcast',
+    title: 'book',
     image: MenuBook,
   },
 ];
@@ -92,7 +93,7 @@ function Header(props: any) {
               tab={<img className="navigation-image" src={tab.image} />}
               key={tab.id}
             >
-              content {tab.id}
+              <Home />
             </TabPane>
           );
         })}
