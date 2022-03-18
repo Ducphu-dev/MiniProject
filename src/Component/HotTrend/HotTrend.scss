@@ -203,10 +203,16 @@
     .none-btn {
         bottom: 30px;
     }
+    @media screen and (max-width: 1350.98px) {
+        &-btn {
+            width: calc(100vw - 100px)!important;
+        }
+    }
+
     @media screen and (max-width: 1279.98px) {
         background-color: #fff;
         .slide-btn-item {
-            display:none !important;
+            display: none !important;
         }
         &-content {
             padding-left: 12px;
@@ -243,7 +249,8 @@
         }
         &-icon-text-person {
             font-size: 12px;
-        }&-btn {
+        }
+        &-btn {
             font-size: 12px;
         }
         ul.slick-dots.slick-dots-bottom {
@@ -333,7 +340,7 @@
         }
         &-img {
             .slick-list {
-                padding: 0 26px !important;
+                padding: 0 2.5vw !important;
                 height: 61.1111vw;
                 padding-bottom: 7vw;
             }
@@ -344,6 +351,10 @@
                 display: none;
             }
         }
+        &-btn {
+            width: calc(100vw - 100px)!important;
+        }
+
         .slick-slide.slick-active.slick-center.slick-current {
             margin: 0 15px;
             width: 91.6667vw !important;
@@ -389,14 +400,15 @@
         //     height: 25px;
         // }
         &-img {
-            .slick-list {
-                padding: 0 15px !important;
-            }
+            // .slick-list {
+            //     padding: 0 15px !important;
+            // }
         }
         &-btn {
-            width: 668px;
             height: 25px;
+            width: calc(100vw - 100px)!important;
         }
+
         .slick-slide.slick-active.slick-center.slick-current {
             // width: 694px !important;
             // .trend-btn {
@@ -430,16 +442,13 @@
                 }
             }
         }
-        &-btn {
-            width: 275px;
-        }
 
         &-img {
             margin-left: 0px;
             margin-right: 0px;
-            .slick-list {
-                padding: 0 7px !important;
-            }
+            // .slick-list {
+            //     padding: 0 7px !important;
+            // }
         }
         .img-main {
             width: 91.6667vw;
