@@ -1,10 +1,11 @@
-import React from 'react';
-import './ScrollBanner.scss';
 import { Carousel } from 'antd';
-import banner1 from '../../Assets/images/ScrollBanner/resource.png';
+import React, { useLayoutEffect, useState } from 'react';
+import label from '../../Assets/images/ScrollBanner/icon_waitfree12_new.png';
 import banner2 from '../../Assets/images/ScrollBanner/resource (1).png';
 import banner3 from '../../Assets/images/ScrollBanner/resource (2).png';
-import label from '../../Assets/images/ScrollBanner/icon_waitfree12_new.png';
+import banner1 from '../../Assets/images/ScrollBanner/resource.png';
+import useWindowSize from '../VerticalCard/useWindowSize';
+import './ScrollBanner.scss';
 
 const data = [
   {
@@ -25,6 +26,17 @@ const data = [
 ];
 
 function ScrollBanner() {
+  const { width, height } = useWindowSize();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useLayoutEffect(() => {
+    if (width <= 1024) {
+      setIsDesktop(true);
+    } else {
+      setIsDesktop(false);
+    }
+  }, [width]);
+
   const SampleNextArrow = (props: any) => {
     const { className, style, onClick } = props;
     return <div className={className} onClick={onClick} />;
@@ -45,11 +57,19 @@ function ScrollBanner() {
   return (
     <section className="scroll-banner">
       <div className="scroll-banner-container">
-        <Carousel arrows {...settings}>
-          {data.map((item) => (
-            <BanneItem src={item.src} label={item.label} key={item.id} />
-          ))}
-        </Carousel>
+        {isDesktop ? (
+          <Carousel arrows {...settings} centerMode centerPadding="60px">
+            {data.map((item) => (
+              <BanneItem src={item.src} label={item.label} key={item.id} />
+            ))}
+          </Carousel>
+        ) : (
+          <Carousel arrows {...settings}>
+            {data.map((item) => (
+              <BanneItem src={item.src} label={item.label} key={item.id} />
+            ))}
+          </Carousel>
+        )}
       </div>
     </section>
   );
