@@ -19,7 +19,7 @@
         &-right{
             display: flex;
             align-items: center;
-            @media (max-width:640px) {
+            @media (max-width:1240px) {
                 display: none;
                 
             }
@@ -44,7 +44,7 @@
             display: flex;
             align-items: center;
             margin-left: auto;
-            @media (max-width:640px) {
+            @media (max-width:1240px) {
                 margin: auto;
                 border-radius: 28px;
                 box-shadow: inset 0px 0px 0px 1px #ebebeb;
@@ -55,7 +55,7 @@
                 align-items: center;
                 cursor: pointer;
                 
-                @media (max-width:640px) {
+                @media (max-width:1240px) {
                     border-radius: 28px;
                     
                     padding: 6px 16px;
@@ -76,7 +76,7 @@
                 }
                 &:not(:last-child){
                     margin-right: 10px;
-                    @media (max-width:640px) {
+                    @media (max-width:1240px) {
                         margin-right: unset;
                     }
                 }
@@ -84,14 +84,14 @@
                     color: map-get($color, text-3 );
                     font-size: 18px;
                     font-family:Noto-San-Bold ;
-                    @media (max-width:640px) {
+                    @media (max-width:1240px) {
                         font-size: 12px;
                     }
                 }
                 svg{
                     width: 20px;
                     height: 20px;
-                    @media (max-width:640px) {
+                    @media (max-width:1240px) {
                         width: 15px;
                         height: 15px;
                     }
@@ -99,7 +99,7 @@
                 &.active{
                     background-color: map-get($color, w );
                     
-                    @media (max-width:640px) {
+                    @media (max-width:1240px) {
                         box-shadow: inset 0px 0px 0px 1px #333333;
                     }
                     &>*{
