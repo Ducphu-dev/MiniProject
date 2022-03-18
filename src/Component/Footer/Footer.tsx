@@ -39,8 +39,8 @@ function Footer() {
           <div className='footer-wrapper_left'>
             <ul className='footerLink'>
               {
-                footerLink.map((items:any)=>
-                  <li ><a href="">{items}</a></li>
+                footerLink.map((items:any,index:any)=>
+                  <li  key={index}><a href="">{items}</a></li>
                 )
               }
             </ul>
@@ -60,13 +60,13 @@ function Footer() {
                   {
                     footerDecs.map((items:any,index:any)=>{
                       return items.Decs_2 ? 
-                      <div className='footerDropdown-decs_infor'>
+                      <div className='footerDropdown-decs_infor' key={index}>
                         <p>{items.Decs_1}</p>
                         <div className='title-dash'>|</div>
                         <p>{items.Decs_2}</p>
                       </div>
                       : 
-                      <div className='footerDropdown-decs_infor'><p>{items.Decs_1}</p></div>
+                      <div className='footerDropdown-decs_infor'  key={index}><p>{items.Decs_1}</p></div>
                     })
                   }
                   {
