@@ -300,7 +300,7 @@
     }
     @media screen and (max-width: 340.98px) {
         .recommend-img-list {
-            gap: 0px;
+            gap: 12px;
             &::-webkit-scrollbar {
                 display: none;
             }
@@ -315,7 +315,7 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
-                    margin-left: 0px;
+                    margin-left: 15px;
                 }
             }
         }
