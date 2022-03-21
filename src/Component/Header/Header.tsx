@@ -12,6 +12,11 @@ import MenuBroadcast from '../../Assets/images/header/menu_broadcast.svg';
 import MenuBook from '../../Assets/images/header/menu_book.svg';
 import './Header.scss';
 import Home from '../../Pages/Main/Tabs/Home/Home';
+import Toon from '../../Pages/Main/Tabs/Toon/Toon';
+import Novel from '../../Pages/Main/Tabs/Novel/Novel';
+import Vod from '../../Pages/Main/Tabs/Vod/Vod';
+import BroadCast from '../../Pages/Main/Tabs/BroadCast/BroadCast';
+import Book from '../../Pages/Main/Tabs/Book/Book';
 
 const { TabPane } = Tabs;
 const tabList = [
@@ -19,31 +24,37 @@ const tabList = [
     id: 1,
     title: 'home',
     image: MenuHome,
+    component: <Home />,
   },
   {
     id: 2,
     title: 'toon',
     image: MenuToon,
+    component: <Toon />,
   },
   {
     id: 3,
     title: 'novel',
     image: MenuNovel,
+    component: <Novel />,
   },
   {
     id: 4,
     title: 'vod',
     image: MenuVod,
+    component: <Vod />,
   },
   {
     id: 5,
     title: 'broadcast',
     image: MenuBroadcast,
+    component: <BroadCast />,
   },
   {
     id: 6,
     title: 'book',
     image: MenuBook,
+    component: <Book />,
   },
 ];
 
@@ -93,7 +104,7 @@ function Header(props: any) {
               tab={<img className="navigation-image" src={tab.image} />}
               key={tab.id}
             >
-              <Home />
+              {tab.component}
             </TabPane>
           );
         })}
