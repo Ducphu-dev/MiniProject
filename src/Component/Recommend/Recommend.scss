@@ -11,6 +11,7 @@
     }
     .ant-card-bordered {
         border: 0px solid #f0f0f0;
+        border-bottom: 1px solid #e6e6e6;
     }
 
     &-card {
@@ -79,7 +80,6 @@
         margin-top: 14px;
         margin-left: 0px;
         margin-right: 0;
-        border-bottom: 1px solid #e6e6e6;
         .img-list {
             border-radius: 6px;
             overflow: hidden;
