@@ -142,6 +142,10 @@
       .footerSgin {
         & > * {
           color: rgb(205, 205, 205);
+          @media (max-width:1024px) {
+            
+            padding-bottom: map-get($space, 20);
+          }
         }
         margin-top: 10px;
       }
