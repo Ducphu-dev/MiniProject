@@ -181,6 +181,11 @@
         }
     }
     @media screen and (max-width: 1023.98px) {
+        .ant-card-body {
+            padding: 0px;
+            margin-right: -17px;
+        }
+
         .recommend-img-list {
             gap: 10px;
             &::-webkit-scrollbar {

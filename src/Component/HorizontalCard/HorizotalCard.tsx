@@ -9,10 +9,10 @@ import HorizontalCardItems from './HorizontalCardItems/HorizontalCardItems';
 
 function HorizontalCard(props:any) {
     
-    const {HorizontalCard, cols, numberLimited,toggleTabs} = props
+    const {HorizontalCard, cols, numberLimited,toggleTabs,padding_mobile} = props
 
     return (
-        <div className= {`block-horizon ${ cols } `}>
+        <div className= {`block-horizon ${ cols }`}>
             {
                 HorizontalCard.map((items:any, index:any) => {
                     return (

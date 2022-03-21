@@ -12,7 +12,13 @@
   }
   @media (max-width: 1024px) {
     column-gap: 6px;
-    padding: 17px 4.5vw 5px;
+    padding: 15px;
+  }
+  &.padding_mobile{
+    @media (max-width: 1024px) {
+      padding: 17px 4.5vw 5px;
+    }
+    
   }
 
   &.horizontal-5 {
