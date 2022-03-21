@@ -90,35 +90,6 @@
                 }
             }
         }
-      
-      .header-amount {
-        & > * {
-          color: map-get($color, text-3);
-          font-size: 14px;
-          font-family: Noto-San-Light;
-          margin-left: 5px;
-        }
-      }
-    
-    &-left {
-      display: flex;
-      align-items: center;
-      margin-left: auto;
-      .header-link {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        & > * {
-          color: map-get($color, text-5);
-          font-size: 18px;
-          font-family: Noto-San-Demi-Light;
-          margin-left: 5px;
-        }
-        img {
-          width: 10px;
-        }
-      }
-    }
 }
   &_nav {
     .trending_nav {
