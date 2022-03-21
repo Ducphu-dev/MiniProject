@@ -77,9 +77,6 @@
     &-img {
         position: relative;
         margin: 20px;
-        margin-top: 14px;
-        margin-left: 0px;
-        margin-right: 0;
         .img-list {
             border-radius: 6px;
             overflow: hidden;
@@ -148,6 +145,10 @@
             max-width: 70%;
         }
     }
+
+    @media screen and (min-width: 1025px) {
+    }
+
     @media screen and (width: 1024px) {
         .recommend-img-main {
             border: 1px solid rgb(248, 248, 248);
@@ -166,6 +167,9 @@
         .recommend-header {
             padding-left: 15px;
             padding-right: 15px;
+        }
+        .recommend-header-right {
+            margin-right: 15px;
         }
         max-width: 1024px;
         .ant-card .ant-card-bordered {
@@ -194,10 +198,16 @@
         .recommend-header-right-more {
             font-size: 13px;
         }
+        &-img {
+            margin-left: 0px;
+            margin-right: 0;
+            margin-top: 14px;
+        }
     }
     @media screen and (max-width: 1023.98px) {
         &-img {
-            margin-left: 0;
+            margin-left: 0px;
+            margin-right: 0;
         }
         .ant-card-body {
             padding: 0px;
@@ -205,7 +215,7 @@
         }
 
         .recommend-img-list {
-            gap: 10px;
+            gap: 0px;
             &::-webkit-scrollbar {
                 display: none;
             }
@@ -221,7 +231,7 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
-                    margin-left: 14px;
+                    margin-left: 0px;
                 }
             }
         }
@@ -246,7 +256,7 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
-                    margin-left: 14px;
+                    margin-left: 0px;
                 }
             }
         }
@@ -278,21 +288,21 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
-                    margin-left: 14px;
+                    margin-left: 0px;
                 }
             }
         }
     }
     @media screen and (max-width: 340.98px) {
         .recommend-img-list {
-            gap: 15px;
+            gap: 0px;
             &::-webkit-scrollbar {
                 display: none;
             }
             .recommend-img-main {
                 scroll-snap-align: center;
                 flex: none;
-                width: 275.2px;
+                width: 86px;
                 height: 43vw;
                 display: flex;
                 img {
@@ -300,7 +310,7 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
-                    margin-left: 14px;
+                    margin-left: 0px;
                 }
             }
         }
