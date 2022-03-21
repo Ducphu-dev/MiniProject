@@ -77,7 +77,8 @@
         position: relative;
         margin: 20px;
         margin-top: 14px;
-        margin-left: 14px;
+        margin-left: 0px;
+        margin-right: 0;
         border-bottom: 1px solid #e6e6e6;
         .img-list {
             border-radius: 6px;
@@ -133,6 +134,7 @@
             height: 360px;
             align-self: center;
             margin: 0 auto;
+            padding-left: 14px;
         }
     }
     &-btn {
@@ -144,6 +146,19 @@
         cursor: pointer;
         &-img {
             max-width: 70%;
+        }
+    }
+    @media screen and (width: 1024px) {
+        .recommend-img-main {
+            border: 1px solid rgb(248, 248, 248);
+            border-radius: 6px;
+            margin-left: 14px;
+            img {
+                padding-left: 0px;
+            }
+        }
+        .recommend-img-list {
+            gap: 1px;
         }
     }
 
@@ -215,7 +230,7 @@
         .header {
             padding: 0 4.5vw;
         }
-        
+
         .recommend-img-list {
             &::-webkit-scrollbar {
                 display: none;
@@ -232,7 +247,6 @@
                     align-self: center;
                     margin: 0 auto;
                     margin-left: 14px;
-
                 }
             }
         }
@@ -265,7 +279,6 @@
                     align-self: center;
                     margin: 0 auto;
                     margin-left: 14px;
-
                 }
             }
         }
@@ -288,7 +301,6 @@
                     align-self: center;
                     margin: 0 auto;
                     margin-left: 14px;
-
                 }
             }
         }
