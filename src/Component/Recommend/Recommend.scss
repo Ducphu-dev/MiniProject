@@ -181,6 +181,9 @@
         }
     }
     @media screen and (max-width: 1023.98px) {
+        &-img {
+            margin-left: 0;
+        }
         .ant-card-body {
             padding: 0px;
             margin-right: -17px;
@@ -203,6 +206,7 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
+                    margin-left: 14px;
                 }
             }
         }
@@ -211,6 +215,7 @@
         .header {
             padding: 0 4.5vw;
         }
+        
         .recommend-img-list {
             &::-webkit-scrollbar {
                 display: none;
@@ -226,11 +231,13 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
+                    margin-left: 14px;
+
                 }
             }
         }
         &-img {
-            margin-left: 15px;
+            margin-left: 1px;
             margin-right: 0px;
             padding-bottom: 5px;
         }
@@ -257,6 +264,8 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
+                    margin-left: 14px;
+
                 }
             }
         }
@@ -278,6 +287,8 @@
                     height: 43vw;
                     align-self: center;
                     margin: 0 auto;
+                    margin-left: 14px;
+
                 }
             }
         }
