@@ -49,7 +49,7 @@ function Footer() {
                 <p className='footerDropdown-handle' onClick={openDropdown}>(주)카카오엔터테인먼트 사업자 정보 </p>
                 <div className='title-dash'>|</div>
                 {
-                  width > 640 ? 
+                  width > 1024 ? 
                   <div className='footerDropdown-link' >
                     <a href="" >사업자 정보 확인</a>
                   </div>:""
@@ -70,7 +70,7 @@ function Footer() {
                     })
                   }
                   {
-                  width <= 640 ? 
+                  width <= 1024 ? 
                     <div className='footerDropdown-link' >
                       <a href="" >사업자 정보 확인</a>
                     </div>:""
