@@ -19,6 +19,11 @@
         padding-top: 22px;
         padding-left:  20px ;
         padding-right:  20px ;
+        @media (max-width:1024px) {
+          padding-top: 15px;
+          padding-left:  15px ;
+          padding-right:  15px ;
+        }
         &-right{
             display: flex;
             align-items: center;

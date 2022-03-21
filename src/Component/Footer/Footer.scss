@@ -16,6 +16,9 @@
     display: flex;
     // align-items: center;
     padding: 60px 0;
+    @media (max-width: 1024px) {
+      padding: 30px 0;
+    }
     * {
       font-size: 14px;
       @media (max-width: 640px) {
@@ -26,14 +29,18 @@
     }
     &_left {
       // flex: 1 0 80%;
+      flex: 1;
       .footerLink {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        @media (max-width:1024px) {
+          max-width: 250px;
+        }
         li:not(:last-child) {
           margin-right: 13px;
           position: relative;
-
+          
           &::after {
             content: '•';
             position: absolute;

@@ -9,10 +9,10 @@ import HorizontalCardNoRank from './HorizontalCardItems/HorizontalCardNoRank';
 
 function HorizontalCard_2(props:any) {
     
-    const {HorizontalCard, cols,numberLimited} = props
+    const {HorizontalCard, cols,numberLimited,padding_mobile} = props
 
     return (
-        <div className= {`block-horizon ${ cols } `}>
+        <div className= {`block-horizon ${ cols }  ${padding_mobile}`}>
             {
                 HorizontalCard.map((items:any, index:any) => {
                     return (

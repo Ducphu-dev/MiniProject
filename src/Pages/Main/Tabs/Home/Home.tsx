@@ -75,6 +75,7 @@ function Home() {
         title={['기다리면 무료 VOD']}
         numberLimited={4}
         cols={'horizontal-4'}
+        padding_mobile={'padding_mobile'}
       />
       <VerticalCard
         cardList={cardList9}
@@ -90,6 +91,7 @@ function Home() {
         numberLimited={4}
         cols={'horizontal-4'}
         mobile_black={'mobile_black'}
+        padding_mobile={'padding_mobile'}
       />
       <Recommend img={RecommendListImg} />
     </>
